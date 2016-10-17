@@ -3,8 +3,12 @@ package br.usjt.caixaeletronico;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class posLogin extends AppCompatActivity {
 
@@ -16,13 +20,14 @@ public class posLogin extends AppCompatActivity {
         Intent intent = getIntent();
         String agencia = intent.getStringExtra(MainActivity.agencia);
         String conta = intent.getStringExtra(MainActivity.conta);
-        TextView textViewAge = new TextView(this);
-        textViewAge.setText(agencia);
-        TextView textViewCon = new TextView(this);
-        textViewCon.setText(conta);
+        TextView textViewAge = (TextView) findViewById(R.id.tvAge);
+        textViewAge.setText("Agência: " + agencia);
+        TextView textViewCon = (TextView) findViewById(R.id.tvCon);
+        textViewCon.setText("Conta: " + conta);
+        Button cExtrato = (Button) findViewById(R.id.bExtrato);
+    }
 
-        LinearLayout layout = (LinearLayout) findViewById(R.id.activity_posLogin);
-        layout.addView(textViewAge);
-        layout.addView(textViewCon);
+    public void consultarExtrato(View view) {
+        ArrayList extrato = new ArrayList();
     }
 }

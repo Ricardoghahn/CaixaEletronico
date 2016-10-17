@@ -19,13 +19,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void logar(View view){
-        Intent intent = new Intent(this, posLogin.class);
         EditText editTextAge = (EditText) findViewById(R.id.agencia);
         EditText editTextCon = (EditText) findViewById(R.id.conta);
         String age = editTextAge.getText().toString();
         String con = editTextCon.getText().toString();
-        intent.putExtra(agencia, age);
-        intent.putExtra(conta, con);
-        startActivity(intent);
+
+        if ((age.equals(null) || age.equals("")) || (con.equals(null) || con.equals(""))) {
+
+        } else {
+            Intent intent = new Intent(this, posLogin.class);
+            intent.putExtra(agencia, age);
+            intent.putExtra(conta, con);
+            startActivity(intent);
+        }
     }
 }

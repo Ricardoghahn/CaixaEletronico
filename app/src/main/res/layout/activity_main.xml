@@ -11,23 +11,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:padding="8dp"
-        android:hint="@string/agencia"/>
+        android:hint="@string/agencia"
+        android:inputType="numberDecimal"
+        android:padding="8dp" />
 
     <EditText
         android:id="@+id/conta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:padding="8dp"
-        android:hint="@string/conta"/>
+        android:hint="@string/conta"
+        android:inputType="numberDecimal"
+        android:padding="8dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Logar"
-        android:padding="8dp"
-        android:textAllCaps="true"
         android:layout_gravity="center_horizontal"
-        android:onClick="logar"/>
+        android:onClick="logar"
+        android:padding="8dp"
+        android:text="Entrar"
+        android:textAllCaps="true" />
 </LinearLayout>
